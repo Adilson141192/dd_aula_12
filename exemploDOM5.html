@@ -12,6 +12,10 @@
 
     </ul>
 
+    <ul class="listaTime">
+
+    </ul>
+
 </body>
 <script>
     var elemento = document.createElement("div");
@@ -23,5 +27,16 @@
     var li = document.createElement("li");
     li.textContent = "Quem somos";
     lista.appendChild(li);
+
+    times = ["Real Madrid", "Barcelona", "Juventos", "Atletico Madrid"]
+
+    var listaDeTimes = document.querySelector('ul.listaTime')
+    for(var i = 0; i < times.length; i++){
+        var time = times[i];
+        var listaItens = document.createElement('li');
+        listaItens.innerText = time;
+        listaItens.style.border = '1px solid blue'
+        listaDeTimes.appendChild(listaItens);
+    }
 </script>
 </html>
